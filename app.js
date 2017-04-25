@@ -1,5 +1,5 @@
 function analyzeText(text) {
-  var textArray = text.toLowerCase().split(/[ ,!.";:-]+/).filter(Boolean).sort();
+  var textArray = text.replace(/\r?\n|\r/g, "").toLowerCase().split(/[ ,!.";:-]+/).filter(Boolean).sort();
   var totalWordCount = textArray.length;
   var uniqueWordCount = 0;
   var wordFrequencies = {};
