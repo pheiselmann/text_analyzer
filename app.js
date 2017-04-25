@@ -30,19 +30,19 @@ function analyzeText(text) {
   averageWordLength = totalWordsLength / textArray.length;
 
   uniqueWordCount = uniqueWordCount - 1;
-  $('js-text-report').removeClass('hidden');
+  $('.js-text-report').removeClass('hidden');
 
-  $('js-text-report').find('.js-word-count').text(totalWordCount);
-  $('js-text-report').find('.js-unique-word-count').text(uniqueWordCount);
-  $('js-text-report').find('.js-average-word-length').text(averageWordLength);
+  $('.js-text-report').find('.js-word-count').text(totalWordCount);
+  $('.js-text-report').find('.js-unique-word-count').text(uniqueWordCount);
+  $('.js-text-report').find('.js-average-word-length').text(averageWordLength + " characters");
 
 }
 
 function handleFormSubmit() {
-  $('button').submit(function(event) { 
+  $('.user-text-entry').submit(function(event) { 
     event.preventDefault(); 
-    $(".js-text-report").empty();
-    var text = $(this).find('input[name="user.text"]').val();
+    $('.js-text-report').empty();
+    var text = $(this).find('#user.text').val();
     analyzeText(text);
   });
 }
