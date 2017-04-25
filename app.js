@@ -28,6 +28,7 @@ function analyzeText(text) {
    }
 
   averageWordLength = totalWordsLength / textArray.length;
+  
   var report = $('.js-text-report');
 
   report.find('.js-word-count').text(totalWordCount);
