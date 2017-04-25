@@ -11,7 +11,7 @@ function analyzeText(text) {
   //Unique word count of the submitted text
   //Average word length in characters of the submitted text
   for (var i = 0; i < textArray.length; i++) {
-    var totalWordsLength += textArray[i].length;
+    totalWordsLength += textArray[i].length;
     
     if (textArray[i] in wordFrequencies) {
       wordFrequencies[textArray[i]]++;
