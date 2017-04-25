@@ -39,7 +39,7 @@ function analyzeText(text) {
 }
 
 function handleFormSubmit() {
-  $('.user-text-entry').submit(function(event) { 
+  $('.js-text-form').submit(function(event) { 
     event.preventDefault(); 
     $('.js-text-report').empty();
     var text = $(this).find('#user.text').val();
