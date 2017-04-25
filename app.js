@@ -28,14 +28,12 @@ function analyzeText(text) {
    }
 
   averageWordLength = totalWordsLength / textArray.length;
+  var report = $('.js-text-report');
 
-  uniqueWordCount = uniqueWordCount - 1;
-
-
-  $('.js-text-report').find('.js-word-count').text(totalWordCount);
-  $('.js-text-report').find('.js-unique-word-count').text(uniqueWordCount);
-  $('.js-text-report').find('.js-average-word-length').text(averageWordLength + " characters");
-  $('.js-text-report').removeClass('hidden');
+  report.find('.js-word-count').text(totalWordCount);
+  report.find('.js-unique-word-count').text(uniqueWordCount);
+  report.find('.js-average-word-length').text(averageWordLength + " characters");
+  report.removeClass('hidden');
 }
 
 function handleFormSubmit() {
