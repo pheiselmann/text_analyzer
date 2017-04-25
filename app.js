@@ -30,10 +30,11 @@ function analyzeText(text) {
   averageWordLength = totalWordsLength / textArray.length;
 
   uniqueWordCount = uniqueWordCount - 1;
-  $('dl').removeClass('hidden');
-  $('.js-word-count').text(totalWordCount);
-  $('.js-unique-word-count').text(uniqueWordCount);
-  $('.js-average-word-length').text(averageWordLength);
+  $('js-text-report').removeClass('hidden');
+
+  $('js-text-report').find('.js-word-count').text(totalWordCount);
+  $('js-text-report').find('.js-unique-word-count').text(uniqueWordCount);
+  $('js-text-report').find('.js-average-word-length').text(averageWordLength);
 
 }
 
