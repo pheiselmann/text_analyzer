@@ -30,18 +30,18 @@ function analyzeText(text) {
   averageWordLength = totalWordsLength / textArray.length;
 
   uniqueWordCount = uniqueWordCount - 1;
-
-  $('dd .js-word-count').append(totalWordCount);
-  $('dd .js-unique-word-count').append(uniqueWordCount);
-  $('dd .js-average-word-length').append(averageWordLength);
+  $('dl').removeClass('hidden');
+  $('.js-word-count').text(totalWordCount);
+  $('.js-unique-word-count').text(uniqueWordCount);
+  $('.js-average-word-length').text(averageWordLength);
 
 }
 
 function handleFormSubmit() {
   $('button').submit(function(event) { 
     event.preventDefault(); 
-    $('dl').removeClass('hidden');
-    var text = $(this).find('input[name="user.text"]');
+    $(".js-text-report").empty();
+    var text = $(this).find('input[name="user.text"]').val();
     analyzeText(text);
   });
 }
